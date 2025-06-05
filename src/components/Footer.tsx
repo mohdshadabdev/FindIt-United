@@ -93,10 +93,10 @@ export const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-slate-600 dark:text-slate-400">
-                Email: support@findunited.edu
+                Email: support@finditunited.edu
               </li>
               <li className="text-slate-600 dark:text-slate-400">
-                Phone: (555) 123-4567
+                Phone: (936) 480-0990
               </li>
               <li className="text-slate-600 dark:text-slate-400">
                 Location: Student Center, Room 101

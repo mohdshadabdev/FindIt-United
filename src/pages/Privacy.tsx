@@ -178,14 +178,14 @@ const Privacy = () => {
           <div className="text-center space-y-2">
             <p className="text-sm text-slate-500 dark:text-slate-500">
               Privacy Officer:{" "}
-              <a href="mailto:privacy@findunited.edu" className="text-purple-600 dark:text-purple-400 hover:underline">
-                privacy@findunited.edu
+              <a href="mailto:privacy@finditunited.edu" className="text-purple-600 dark:text-purple-400 hover:underline">
+                privacy@finditunited.edu
               </a>
             </p>
             <p className="text-sm text-slate-500 dark:text-slate-500">
               General Support:{" "}
-              <a href="mailto:support@findunited.edu" className="text-purple-600 dark:text-purple-400 hover:underline">
-                support@findunited.edu
+              <a href="mailto:support@finditunited.edu" className="text-purple-600 dark:text-purple-400 hover:underline">
+                support@finditunited.edu
               </a>
             </p>
           </div>

@@ -102,8 +102,8 @@ const Terms = () => {
           <div className="text-center">
             <p className="text-sm text-slate-500 dark:text-slate-500">
               For questions about these terms, contact us at{" "}
-              <a href="mailto:legal@findunited.edu" className="text-green-600 dark:text-green-400 hover:underline">
-                legal@findunited.edu
+              <a href="mailto:legal@finditunited.edu" className="text-green-600 dark:text-green-400 hover:underline">
+                legal@finditunited.edu
               </a>
             </p>
           </div>

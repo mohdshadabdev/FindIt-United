@@ -33,7 +33,7 @@ const FAQ = () => {
         },
         {
           question: "Can I edit my submission after posting?",
-          answer: "Currently, you cannot directly edit submissions through the platform. If you need to make changes, please contact our support team at support@findunited.edu with your submission details."
+          answer: "Currently, you cannot directly edit submissions through the platform. If you need to make changes, please contact our support team at support@finditunited.edu with your submission details."
         },
         {
           question: "How do I claim an item I found in the listings?",
@@ -47,7 +47,7 @@ const FAQ = () => {
       questions: [
         {
           question: "Where is the physical lost and found office?",
-          answer: "The lost and found office is located in the Student Center, Room 101. Office hours are Monday through Friday, 9:00 AM to 5:00 PM. You can also reach us by phone at (555) 123-4567."
+          answer: "The lost and found office is located in the Student Center, Room 101. Office hours are Monday through Friday, 9:00 AM to 5:00 PM. You can also reach us by phone at (936) 480-0990."
         },
         {
           question: "Who reviews my claim requests?",
@@ -131,7 +131,7 @@ const FAQ = () => {
               Contact Support
             </a>
             <a
-              href="mailto:support@findunited.edu"
+              href="mailto:support@finditunited.edu"
               className="inline-flex items-center justify-center px-6 py-3 border border-blue-300 dark:border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all"
             >
               Email Us
