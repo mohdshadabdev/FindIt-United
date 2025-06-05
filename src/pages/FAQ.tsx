@@ -47,7 +47,7 @@ const FAQ = () => {
       questions: [
         {
           question: "Where is the physical lost and found office?",
-          answer: "The lost and found office is located in the Student Center, Room 101. Office hours are Monday through Friday, 9:00 AM to 5:00 PM. You can also reach us by phone at (936) 480-0990."
+          answer: "The lost and found office is located in the United Student Center, Room 101. Office hours are Monday through Friday, 9:00 AM to 5:00 PM. You can also reach us by phone at (936) 480-0990."
         },
         {
           question: "Who reviews my claim requests?",
