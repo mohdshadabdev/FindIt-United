@@ -179,10 +179,10 @@ export const Login = () => {
             </form>
           </Card>
           
-          <div className="text-center text-sm text-slate-600 dark:text-slate-400 mt-4 p-4 border border-dashed rounded-md">
+          {/* <div className="text-center text-sm text-slate-600 dark:text-slate-400 mt-4 p-4 border border-dashed rounded-md">
             <p className="font-bold">Quick Start:</p>
             <p>No email verification needed! Register a new account or use demo credentials above.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
