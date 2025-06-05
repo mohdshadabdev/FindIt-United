@@ -1,73 +1,97 @@
-# Welcome to your Lovable project
 
-## Project info
+# FindIt@United 
 
-**URL**: https://lovable.dev/projects/f7e6d770-d42c-40f6-abfc-e957f6326d92
+**Live Project:** https://founditunited.netlify.app/
 
-## How can I edit this code?
+## 📌 Project Overview
 
-There are several ways of editing your application.
+**FindIt@United** is a campus-based lost and found web application designed to help students, faculty, and staff report, find, and recover lost items within the university. This platform reduces the hassle of manually searching for lost items and promotes a responsible and helpful community.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f7e6d770-d42c-40f6-abfc-e957f6326d92) and start prompting.
+## 🛠️ Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🔍 **Search Lost Items:** Users can search through listed found items using filters like name, category, location, and date.
+- 📤 **Report Lost/Found Items:** Easily report a lost or found item with detailed descriptions and optional images.
+- 🔔 **Real-Time Toast Notifications:** Custom-built toast system for alerts and confirmations.
+- 👤 **User-Friendly Interface:** Clean, intuitive design using Tailwind CSS.
+- ⏱️ **Quick and Responsive:** Built using Vite and modern web technologies for fast performance.
+- 🤖 **Chatbot Assistance:** An interactive chatbot is integrated to help users navigate the website and get quick answers.
+- 📬 **Contact Us System:** A dedicated contact form allows users to directly reach out for support or inquiries.
+---
 
-**Use your preferred IDE**
+## 🧱 Technologies Used
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Frontend:** HTML, CSS, JavaScript, TypeScript, Tailwind CSS
+- **Framework:** Vite.js
+- **Tooling:** Bun, ESLint, Toast Hooks
+- **Hosting:** Netlify
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📈 Future Scope
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Mobile app version with real-time push notifications.
+- AI-based matching of items based on images/descriptions.
+- Admin dashboard for managing item reports.
+- Integration with campus CCTV and smart lockers.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📂 Folder Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/         # Reusable UI components
+├── hooks/              # Custom hooks (e.g., useToast)
+├── lib/                # Utility functions
+├── public/             # Static assets
+├── index.html          # Entry HTML file
+└── tailwind.config.ts  # Tailwind configuration
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Getting Started Locally
 
-**Use GitHub Codespaces**
+1. **Clone the Repository**
+```bash
+git clone https://github.com/your-username/findit-united.git
+cd findit-united
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. **Install Dependencies (using bun)**
+```bash
+bun install
+```
 
-## What technologies are used for this project?
+3. **Run Locally**
+```bash
+bun dev
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🙏 Acknowledgements
 
-## How can I deploy this project?
+- Designed and Developed by: **Mohd Shadab & Team**
+- Inspired by the need to build a smarter, student-centric university app.
+- Special thanks to United University Faculty and Mentors.
 
-Simply open [Lovable](https://lovable.dev/projects/f7e6d770-d42c-40f6-abfc-e957f6326d92) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📚 References
 
-Yes, you can!
+- React & Toast Implementation: [https://reactjs.org](https://reactjs.org)
+- TailwindCSS Docs: [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+- Vite: [https://vitejs.dev](https://vitejs.dev)
+- Firebase (future scope): [https://firebase.google.com](https://firebase.google.com)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+> "Lost something? Someone might’ve found it! Let FindIt@United help you reconnect." 💫
+
+## Contributors
+
+-Mohd Shadab (IVth Semester, BCA, United University)
+
