@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const images = [
   {
-    url: "/lovable-uploads/081a76de-5b36-4c63-8bf0-9919baa0c23f.png",
+    url: "/uploads/081a76de-5b36-4c63-8bf0-9919baa0c23f.png",
     alt: "United University Campus - Main Building"
   },
   {
