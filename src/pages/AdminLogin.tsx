@@ -180,12 +180,6 @@ export const AdminLogin = () => {
               </CardFooter>
             </form>
           </Card>
-          
-          <div className="text-center text-sm text-slate-600 dark:text-slate-400 mt-4 p-4 border border-dashed rounded-md">
-            <p className="font-bold">Important Note:</p>
-            <p>No email verification required for demo accounts.</p>
-            <p>Use the demo credentials above for instant access.</p>
-          </div>
         </div>
       </div>
     </div>
