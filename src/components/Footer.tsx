@@ -99,7 +99,7 @@ export const Footer = () => {
                 Phone: (936) 480-0990
               </li>
               <li className="text-slate-600 dark:text-slate-400">
-                Location: Student Center, Room 101
+                Location: Student Center, Room 101, United University, Prayagraj
               </li>
             </ul>
           </div>
