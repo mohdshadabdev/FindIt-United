@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
 
-// Sample items data with Indian context
+// Sample items data
 const sampleItems = [
   {
     id: "sample-1",
@@ -32,20 +32,20 @@ const sampleItems = [
     reported_at: "2024-05-20T10:30:00Z",
     user_id: "user-1",
     date: "2024-05-20",
-    image: null
+    image: "https://placehold.co/600x400/1e40af/FFFFFF/png?text=iPhone+14+Pro"
   },
   {
-    id: "sample-2", 
-    name: "Red Water Bottle",
-    category: "Personal Items",
-    location: "Cafeteria",
-    description: "Nike red water bottle with 'Rahul' written in permanent marker on the bottom.",
-    type: "found",
+    id: "sample-2",
+    name: "MacBook Pro",
+    category: "Electronics",
+    location: "Student Center",
+    description: "13\" MacBook Pro (2020) with a blue hard shell case. Slight crack on the bottom right corner.",
+    type: "lost",
     status: "active",
-    reported_at: "2024-05-21T14:15:00Z",
+    reported_at: "2024-05-21T12:00:00Z",
     user_id: "user-2",
     date: "2024-05-21",
-    image: null
+    image: "https://placehold.co/600x400/0284c7/FFFFFF/png?text=MacBook+Pro"
   },
   {
     id: "sample-3",
@@ -58,12 +58,12 @@ const sampleItems = [
     reported_at: "2024-05-22T09:45:00Z",
     user_id: "user-3",
     date: "2024-05-22",
-    image: null
+    image: "https://placehold.co/600x400/16a34a/FFFFFF/png?text=Engineering+Book"
   },
   {
     id: "sample-4",
     name: "Black Wallet",
-    category: "Personal Items", 
+    category: "Personal Items",
     location: "Student Center",
     description: "Black leather wallet containing student ID, some cash, and a photo of family.",
     type: "found",
@@ -71,7 +71,7 @@ const sampleItems = [
     reported_at: "2024-05-23T16:20:00Z",
     user_id: "user-4",
     date: "2024-05-23",
-    image: null
+    image: "https://placehold.co/600x400/0f172a/FFFFFF/png?text=Black+Wallet"
   },
   {
     id: "sample-5",
@@ -84,7 +84,7 @@ const sampleItems = [
     reported_at: "2024-05-24T11:30:00Z",
     user_id: "user-5",
     date: "2024-05-24",
-    image: null
+    image: "https://placehold.co/600x400/10b981/FFFFFF/png?text=Earbuds"
   },
   {
     id: "sample-6",
@@ -97,7 +97,7 @@ const sampleItems = [
     reported_at: "2024-05-25T13:10:00Z",
     user_id: "user-6",
     date: "2024-05-25",
-    image: null
+    image: "https://placehold.co/600x400/f59e0b/FFFFFF/png?text=Calculator"
   },
   {
     id: "sample-7",
@@ -110,15 +110,15 @@ const sampleItems = [
     reported_at: "2024-05-26T15:45:00Z",
     user_id: "user-7",
     date: "2024-05-26",
-    image: null
+    image: "https://placehold.co/600x400/8b5cf6/FFFFFF/png?text=ID+Card"
   }
 ];
 
-// Mock data for claims with Indian names
+// Mock data for claims
 const mockClaims = [
   {
     id: 1,
-    itemId: 3,
+    itemId: "sample-7",
     itemName: "Student ID Card",
     claimant: "Priya Patel",
     contact: "priya.patel@united.edu",
@@ -128,37 +128,27 @@ const mockClaims = [
   },
   {
     id: 2,
-    itemId: 2,
+    itemId: "sample-2",
     itemName: "MacBook Pro",
     claimant: "Rahul Kumar",
     contact: "rahul.kumar@united.edu",
     date: "May 21, 2024",
     status: "pending",
-    proof: "It's a 13\" MacBook Pro (2020) with a blue hard shell case. The password is my student ID UU2024002 and there's a cracked pixel in the bottom right corner of the screen."
+    proof: "It's a 13\" MacBook Pro (2020) with a grey hard shell case. The password is my student ID UU2024002 and there's a cracked pixel in the bottom right corner of the screen."
   },
   {
     id: 3,
-    itemId: 4,
-    itemName: "iPhone 14",
+    itemId: "sample-1",
+    itemName: "iPhone 14 Pro",
     claimant: "Vikram Sharma",
     contact: "vikram.sharma@united.edu",
     date: "May 22, 2024",
     status: "pending",
-    proof: "It's a space gray iPhone 14 with a cracked screen protector. I have photos of it and can provide the IMEI number for verification."
+    proof: "It's a blue colour iPhone 14 with a cracked screen protector. I have photos of it and can provide the IMEI number for verification."
   },
   {
     id: 4,
-    itemId: 5,
-    itemName: "Red Water Bottle",
-    claimant: "Kavya Reddy",
-    contact: "kavya.reddy@united.edu",
-    date: "May 23, 2024",
-    status: "pending",
-    proof: "It's a red Nike water bottle with my initials 'KR' written on the bottom with permanent marker. I lost it during basketball practice."
-  },
-  {
-    id: 5,
-    itemId: 7,
+    itemId: "sample-4",
     itemName: "Black Wallet",
     claimant: "Neha Joshi",
     contact: "neha.joshi@united.edu",
@@ -167,6 +157,7 @@ const mockClaims = [
     proof: "It's a black leather wallet with my driving license and student ID inside. The wallet has a small tear on the right corner."
   }
 ];
+
 
 // Mock data for contact queries with Indian names
 const mockContactQueries = [
@@ -610,8 +601,20 @@ export const AdminDashboard = () => {
                                 >
                                   Approve
                                 </Button>
-                                <Button 
-                                  variant="destructive" 
+                                <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setSelectedItem(item);
+                  setSelectedClaim(null);
+                  setSelectedQuery(null);
+                  setSelectedAction(null);
+                  setDialogOpen(true);
+                }}
+              >
+                View
+              </Button>
+              <Button variant="destructive\" 
                                   size="sm"
                                   onClick={() => handleItemAction(item, "reject")}
                                 >
@@ -784,7 +787,7 @@ export const AdminDashboard = () => {
 
       {/* View/Action Dialog */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent>
+        <DialogContent className="max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
               {selectedAction && !selectedQuery
@@ -802,7 +805,10 @@ export const AdminDashboard = () => {
             </DialogDescription>
           </DialogHeader>
 
-          {selectedClaim && (
+          
+  {/* Scrollable section */}
+  <div className="space-y-4 max-h-[65vh] overflow-y-auto px-1">
+{selectedClaim && (
             <div className="space-y-4">
               <div>
                 <h4 className="font-semibold">Item</h4>
@@ -867,7 +873,8 @@ export const AdminDashboard = () => {
             </div>
           )}
 
-          <DialogFooter>
+          </div>
+  <DialogFooter>
             <Button variant="outline" onClick={() => setDialogOpen(false)}>
               {selectedQuery ? "Close" : "Cancel"}
             </Button>

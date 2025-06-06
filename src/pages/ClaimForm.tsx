@@ -27,7 +27,7 @@ const mockItems = [
     category: "Electronics",
     location: "Student Center",
     date: new Date(2023, 4, 15),
-    image: "https://placehold.co/600x400/6366f1/FFFFFF/png?text=Laptop",
+    image: "https://placehold.co/600x400/6366f1/FFFFFF/png?text=MacBook+Pro",
     description: "13-inch MacBook Pro (2020) with stickers on the cover. Left on a table in the study area.",
     type: "lost"
   },
@@ -43,15 +43,56 @@ const mockItems = [
   },
   {
     id: "4",
+    name: "iPhone 14",
+    category: "Electronics",
+    location: "Science Building",
+    date: new Date(2024, 4, 20),
+    image: "https://placehold.co/600x400/0ea5e9/FFFFFF/png?text=iPhone+14",
+    description: "Black iPhone 14 with a transparent case. Found near the lab benches.",
+    type: "found"
+  },
+  {
+    id: "5",
     name: "Nike Water Bottle",
     category: "Other",
     location: "Sports Complex",
     date: new Date(2023, 4, 20),
-    image: "https://placehold.co/600x400/ec4899/FFFFFF/png?text=Water+Bottle",
+    image: "https://placehold.co/600x400/ec4899/FFFFFF/png?text=Nike+Water+Bottle",
     description: "Black Nike water bottle with a flip-top lid. Found in the gym.",
     type: "found"
   },
+  {
+    id: "6",
+    name: "Engineering Textbook",
+    category: "Books",
+    location: "Main Building",
+    date: new Date(2024, 4, 25),
+    image: "https://placehold.co/600x400/14b8a6/FFFFFF/png?text=Engineering+Book",
+    description: "Thermodynamics textbook with notes inside. Found in the lecture hall.",
+    type: "found"
+  },
+  {
+    id: "7",
+    name: "Black Wallet",
+    category: "Accessories",
+    location: "Parking Lot",
+    date: new Date(2024, 4, 28),
+    image: "https://placehold.co/600x400/0f172a/FFFFFF/png?text=Black+Wallet",
+    description: "Black leather wallet containing cash and ID. Found beside a parked bike.",
+    type: "found"
+  },
+  {
+    id: "8",
+    name: "Wireless Earbuds",
+    category: "Electronics",
+    location: "Dormitory",
+    date: new Date(2024, 5, 2),
+    image: "https://placehold.co/600x400/1d4ed8/FFFFFF/png?text=Earbuds",
+    description: "Black wireless earbuds in a charging case. Last seen near bunk beds.",
+    type: "lost"
+  }
 ];
+
 
 export const ClaimForm = () => {
   const { id } = useParams<{ id: string }>();
