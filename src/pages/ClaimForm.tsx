@@ -57,7 +57,7 @@ const mockItems = [
     category: "Other",
     location: "Sports Complex",
     date: new Date(2023, 4, 20),
-    image: "https://placehold.co/600x400/ec4899/FFFFFF/png?text=Nike+Water+Bottle",
+    image: "https://imgs.search.brave.com/MNvAElLrcGq83m71Jt7a0Q7Xc22v79qrb-jxX4fIW54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly94Y2Ru/Lm5leHQuY28udWsv/Q29tbW9uL0l0ZW1z/L0RlZmF1bHQvRGVm/YXVsdC9JdGVtSW1h/Z2VzLzNfNFJhdGlv/L1NlYXJjaC9MZ2Uv/NjA5NTA0LmpwZz9p/bT1SZXNpemUsd2lk/dGg9NDUw",
     description: "Black Nike water bottle with a flip-top lid. Found in the gym.",
     type: "found"
   },
