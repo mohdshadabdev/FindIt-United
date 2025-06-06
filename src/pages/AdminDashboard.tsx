@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/components/ui/use-toast";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Dialog,
   DialogContent,
@@ -26,44 +27,44 @@ const sampleItems = [
     name: "iPhone 14 Pro",
     category: "Electronics",
     location: "Library - 2nd Floor",
-    description: "Space Gray iPhone 14 Pro with a cracked screen protector. Has a blue case with 'Priya' written on it.",
+    description: "Blue iPhone 14 Pro with a cracked screen protector. Has a blue case with 'Priya' written on it.",
     type: "lost",
     status: "active",
     reported_at: "2024-05-20T10:30:00Z",
     user_id: "user-1",
     date: "2024-05-20",
-    image: "https://placehold.co/600x400/1e40af/FFFFFF/png?text=iPhone+14+Pro"
+    image: "https://cdn.zeebiz.com/sites/default/files/2022/09/21/201340-14c.jpg"
   },
   {
-    id: "sample-2",
-    name: "MacBook Pro",
-    category: "Electronics",
-    location: "Student Center",
-    description: "13\" MacBook Pro (2020) with a blue hard shell case. Slight crack on the bottom right corner.",
-    type: "lost",
+    id: "sample-2", 
+    name: "Nike Water Bottle",
+    category: "Personal Items",
+    location: "Cafeteria",
+    description: "Nike red water bottle with 'Rahul' written in permanent marker on the bottom.",
+    type: "found",
     status: "active",
-    reported_at: "2024-05-21T12:00:00Z",
+    reported_at: "2024-05-21T14:15:00Z",
     user_id: "user-2",
     date: "2024-05-21",
-    image: "https://placehold.co/600x400/0284c7/FFFFFF/png?text=MacBook+Pro"
+    image: "https://imgs.search.brave.com/MNvAElLrcGq83m71Jt7a0Q7Xc22v79qrb-jxX4fIW54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly94Y2Ru/Lm5leHQuY28udWsv/Q29tbW9uL0l0ZW1z/L0RlZmF1bHQvRGVm/YXVsdC9JdGVtSW1h/Z2VzLzNfNFJhdGlv/L1NlYXJjaC9MZ2Uv/NjA5NTA0LmpwZz9p/bT1SZXNpemUsd2lk/dGg9NDUw"
   },
   {
     id: "sample-3",
     name: "Engineering Textbook",
     category: "Books",
     location: "Engineering Building - Room 301",
-    description: "Engineering Mathematics by K.A. Stroud, 7th edition. Has handwritten notes in Hindi and English.",
+    description: "Security Engineering by K.A. Stroud, 7th edition. Has handwritten notes in Hindi and English.",
     type: "lost",
     status: "pending",
     reported_at: "2024-05-22T09:45:00Z",
     user_id: "user-3",
     date: "2024-05-22",
-    image: "https://placehold.co/600x400/16a34a/FFFFFF/png?text=Engineering+Book"
+    image: "https://www.cl.cam.ac.uk/archive/rja14/Papers/book2coverlarge.jpg"
   },
   {
     id: "sample-4",
     name: "Black Wallet",
-    category: "Personal Items",
+    category: "Personal Items", 
     location: "Student Center",
     description: "Black leather wallet containing student ID, some cash, and a photo of family.",
     type: "found",
@@ -71,20 +72,20 @@ const sampleItems = [
     reported_at: "2024-05-23T16:20:00Z",
     user_id: "user-4",
     date: "2024-05-23",
-    image: "https://placehold.co/600x400/0f172a/FFFFFF/png?text=Black+Wallet"
+    image: "https://teakwoodleathers.com/cdn/shop/products/T_WLT_485_BL_1_1aea31b8-cf7b-4b08-b964-7a9712e8609c.jpg?v=1684316527"
   },
   {
     id: "sample-5",
     name: "Wireless Earbuds",
     category: "Electronics",
     location: "Dormitory - Building A",
-    description: "White AirPods Pro with charging case. Small scratch on the case lid.",
+    description: "Grey JBL Pro with charging case. Small scratch on the case lid.",
     type: "lost",
     status: "active",
     reported_at: "2024-05-24T11:30:00Z",
     user_id: "user-5",
     date: "2024-05-24",
-    image: "https://placehold.co/600x400/10b981/FFFFFF/png?text=Earbuds"
+    image: "https://i.rtings.com/assets/products/jmVQj3MR/jbl-vibe-100tws-true-wireless/design-medium.jpg?format=auto"
   },
   {
     id: "sample-6",
@@ -97,7 +98,7 @@ const sampleItems = [
     reported_at: "2024-05-25T13:10:00Z",
     user_id: "user-6",
     date: "2024-05-25",
-    image: "https://placehold.co/600x400/f59e0b/FFFFFF/png?text=Calculator"
+    image: "https://m.media-amazon.com/images/I/81hYhBFg5FL._AC_UF1000,1000_QL80_.jpg"
   },
   {
     id: "sample-7",
@@ -110,7 +111,7 @@ const sampleItems = [
     reported_at: "2024-05-26T15:45:00Z",
     user_id: "user-7",
     date: "2024-05-26",
-    image: "https://placehold.co/600x400/8b5cf6/FFFFFF/png?text=ID+Card"
+    image: "https://images.template.net/21918/Printable-University-ID-Card-Template.jpg"
   }
 ];
 
@@ -118,7 +119,7 @@ const sampleItems = [
 const mockClaims = [
   {
     id: 1,
-    itemId: "sample-7",
+    itemId: 3,
     itemName: "Student ID Card",
     claimant: "Priya Patel",
     contact: "priya.patel@united.edu",
@@ -128,7 +129,7 @@ const mockClaims = [
   },
   {
     id: 2,
-    itemId: "sample-2",
+    itemId: 2,
     itemName: "MacBook Pro",
     claimant: "Rahul Kumar",
     contact: "rahul.kumar@united.edu",
@@ -138,17 +139,27 @@ const mockClaims = [
   },
   {
     id: 3,
-    itemId: "sample-1",
+    itemId: 4,
     itemName: "iPhone 14 Pro",
     claimant: "Vikram Sharma",
     contact: "vikram.sharma@united.edu",
     date: "May 22, 2024",
     status: "pending",
-    proof: "It's a blue colour iPhone 14 with a cracked screen protector. I have photos of it and can provide the IMEI number for verification."
+    proof: "It's a blue iPhone 14 Pro with a cracked screen protector. I have photos of it and can provide the IMEI number for verification."
   },
   {
     id: 4,
-    itemId: "sample-4",
+    itemId: 5,
+    itemName: "Nike Water Bottle",
+    claimant: "Kavya Reddy",
+    contact: "kavya.reddy@united.edu",
+    date: "May 23, 2024",
+    status: "pending",
+    proof: "It's a Nike water bottle with my initials 'KR' written on the bottom with permanent marker. I lost it during basketball practice."
+  },
+  {
+    id: 5,
+    itemId: 7,
     itemName: "Black Wallet",
     claimant: "Neha Joshi",
     contact: "neha.joshi@united.edu",
@@ -158,8 +169,7 @@ const mockClaims = [
   }
 ];
 
-
-// Mock data for contact queries with Indian names
+// Mock data for contact queries
 const mockContactQueries = [
   {
     id: "1",
@@ -334,15 +344,44 @@ export const AdminDashboard = () => {
     query.message?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Fixed handler functions to properly reset dialog state
   const handleItemAction = (item: any, action: "approve" | "reject") => {
     setSelectedItem(item);
+    setSelectedClaim(null);
+    setSelectedQuery(null);
     setSelectedAction(action);
     setDialogOpen(true);
   };
 
   const handleClaimAction = (claim: any, action: "approve" | "reject") => {
     setSelectedClaim(claim);
+    setSelectedItem(null);
+    setSelectedQuery(null);
     setSelectedAction(action);
+    setDialogOpen(true);
+  };
+
+  const viewItemDetails = (item: any) => {
+    setSelectedItem(item);
+    setSelectedClaim(null);
+    setSelectedQuery(null);
+    setSelectedAction(null);
+    setDialogOpen(true);
+  };
+
+  const viewClaimDetails = (claim: any) => {
+    setSelectedClaim(claim);
+    setSelectedItem(null);
+    setSelectedQuery(null);
+    setSelectedAction(null);
+    setDialogOpen(true);
+  };
+
+  const viewQueryDetails = (query: any) => {
+    setSelectedQuery(query);
+    setSelectedClaim(null);
+    setSelectedItem(null);
+    setSelectedAction(null);
     setDialogOpen(true);
   };
 
@@ -426,12 +465,6 @@ export const AdminDashboard = () => {
     });
   };
 
-  const viewQueryDetails = (query: any) => {
-    setSelectedQuery(query);
-    setDialogOpen(true);
-  };
-
-  // Format date for display
   const formatDate = (dateString: string) => {
     try {
       return format(new Date(dateString), 'MMM d, yyyy h:mm a');
@@ -440,7 +473,6 @@ export const AdminDashboard = () => {
     }
   };
 
-  // Calculate counts for stats
   const pendingItems = items.filter(i => i.status === "pending").length;
   const activeItems = items.filter(i => i.status === "active").length;
   const lostItems = items.filter(i => i.type === "lost").length;
@@ -541,7 +573,7 @@ export const AdminDashboard = () => {
           <TabsTrigger value="queries">Contact Queries</TabsTrigger>
         </TabsList>
 
-        {/* Items Tab */}
+        {/* Items Tab with ScrollArea */}
         <TabsContent value="items">
           <Card className="animate-fade-in">
             <CardHeader>
@@ -549,92 +581,89 @@ export const AdminDashboard = () => {
             </CardHeader>
             <CardContent>
               {filteredItems.length > 0 ? (
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Item</TableHead>
-                      <TableHead>Category</TableHead>
-                      <TableHead>Location</TableHead>
-                      <TableHead>Date</TableHead>
-                      <TableHead>Type</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead className="text-right">Action</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {filteredItems.map((item) => (
-                      <TableRow key={item.id}>
-                        <TableCell className="font-medium">{item.name}</TableCell>
-                        <TableCell>{item.category}</TableCell>
-                        <TableCell>{item.location}</TableCell>
-                        <TableCell>{formatDate(item.reported_at)}</TableCell>
-                        <TableCell>
-                          <Badge variant={item.type === "lost" ? "destructive" : "default"}>
-                            {item.type === "lost" ? "Lost" : "Found"}
-                          </Badge>
-                        </TableCell>
-                        <TableCell>
-                          <Badge 
-                            variant={
-                              item.status === "active" 
-                                ? "default" 
-                                : item.status === "pending" 
-                                  ? "outline" 
-                                  : "destructive"
-                            }
-                          >
-                            {item.status === "active" 
-                              ? "Approved" 
-                              : item.status === "pending" 
-                                ? "Pending"
-                                : "Rejected"}
-                          </Badge>
-                        </TableCell>
-                        <TableCell className="text-right">
-                          <div className="flex justify-end gap-2">
-                            {item.status === "pending" && (
-                              <>
-                                <Button 
-                                  variant="default" 
-                                  size="sm" 
-                                  onClick={() => handleItemAction(item, "approve")}
-                                >
-                                  Approve
-                                </Button>
-                                <Button
-                variant="outline"
-                size="sm"
-                onClick={() => {
-                  setSelectedItem(item);
-                  setSelectedClaim(null);
-                  setSelectedQuery(null);
-                  setSelectedAction(null);
-                  setDialogOpen(true);
-                }}
-              >
-                View
-              </Button>
-              <Button variant="destructive\" 
-                                  size="sm"
-                                  onClick={() => handleItemAction(item, "reject")}
-                                >
-                                  Reject
-                                </Button>
-                              </>
-                            )}
-                            <Button 
-                              variant="destructive" 
-                              size="sm" 
-                              onClick={() => deleteItem(item.id)}
-                            >
-                              Delete
-                            </Button>
-                          </div>
-                        </TableCell>
+                <ScrollArea className="h-[600px] w-full">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Item</TableHead>
+                        <TableHead>Category</TableHead>
+                        <TableHead>Location</TableHead>
+                        <TableHead>Date</TableHead>
+                        <TableHead>Type</TableHead>
+                        <TableHead>Status</TableHead>
+                        <TableHead className="text-right">Action</TableHead>
                       </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
+                    </TableHeader>
+                    <TableBody>
+                      {filteredItems.map((item) => (
+                        <TableRow key={item.id}>
+                          <TableCell className="font-medium">{item.name}</TableCell>
+                          <TableCell>{item.category}</TableCell>
+                          <TableCell>{item.location}</TableCell>
+                          <TableCell>{formatDate(item.reported_at)}</TableCell>
+                          <TableCell>
+                            <Badge variant={item.type === "lost" ? "destructive" : "default"}>
+                              {item.type === "lost" ? "Lost" : "Found"}
+                            </Badge>
+                          </TableCell>
+                          <TableCell>
+                            <Badge 
+                              variant={
+                                item.status === "active" 
+                                  ? "default" 
+                                  : item.status === "pending" 
+                                    ? "outline" 
+                                    : "destructive"
+                              }
+                            >
+                              {item.status === "active" 
+                                ? "Approved" 
+                                : item.status === "pending" 
+                                  ? "Pending"
+                                  : "Rejected"}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <div className="flex justify-end gap-2">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => viewItemDetails(item)}
+                              >
+                                View
+                              </Button>
+                              {item.status === "pending" && (
+                                <>
+                                  <Button 
+                                    variant="default" 
+                                    size="sm" 
+                                    onClick={() => handleItemAction(item, "approve")}
+                                  >
+                                    Approve
+                                  </Button>
+                                  <Button 
+                                    variant="destructive" 
+                                    size="sm"
+                                    onClick={() => handleItemAction(item, "reject")}
+                                  >
+                                    Reject
+                                  </Button>
+                                </>
+                              )}
+                              <Button 
+                                variant="destructive" 
+                                size="sm" 
+                                onClick={() => deleteItem(item.id)}
+                              >
+                                Delete
+                              </Button>
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </ScrollArea>
               ) : (
                 <div className="text-center py-8">
                   <p className="text-slate-600 dark:text-slate-400">No items found matching your search.</p>
@@ -644,7 +673,7 @@ export const AdminDashboard = () => {
           </Card>
         </TabsContent>
 
-        {/* Claims Tab */}
+        {/* Claims Tab with ScrollArea */}
         <TabsContent value="claims">
           <Card className="animate-fade-in">
             <CardHeader>
@@ -652,78 +681,76 @@ export const AdminDashboard = () => {
             </CardHeader>
             <CardContent>
               {filteredClaims.length > 0 ? (
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Item</TableHead>
-                      <TableHead>Claimant</TableHead>
-                      <TableHead>Contact</TableHead>
-                      <TableHead>Date</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead className="text-right">Action</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {filteredClaims.map((claim) => (
-                      <TableRow key={claim.id}>
-                        <TableCell className="font-medium">{claim.itemName}</TableCell>
-                        <TableCell>{claim.claimant}</TableCell>
-                        <TableCell>{claim.contact}</TableCell>
-                        <TableCell>{claim.date}</TableCell>
-                        <TableCell>
-                          <Badge
-                            variant={
-                              claim.status === "approved"
-                                ? "default"
-                                : claim.status === "rejected"
-                                ? "destructive"
-                                : "outline"
-                            }
-                          >
-                            {claim.status === "approved"
-                              ? "Approved"
-                              : claim.status === "rejected"
-                              ? "Rejected"
-                              : "Pending"}
-                          </Badge>
-                        </TableCell>
-                        <TableCell className="text-right">
-                          <div className="flex justify-end gap-2">
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => {
-                                setSelectedClaim(claim);
-                                setSelectedAction(null);
-                                setDialogOpen(true);
-                              }}
-                            >
-                              View
-                            </Button>
-                            {claim.status === "pending" && (
-                              <>
-                                <Button
-                                  variant="default"
-                                  size="sm"
-                                  onClick={() => handleClaimAction(claim, "approve")}
-                                >
-                                  Approve
-                                </Button>
-                                <Button
-                                  variant="destructive"
-                                  size="sm"
-                                  onClick={() => handleClaimAction(claim, "reject")}
-                                >
-                                  Reject
-                                </Button>
-                              </>
-                            )}
-                          </div>
-                        </TableCell>
+                <ScrollArea className="h-[600px] w-full">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Item</TableHead>
+                        <TableHead>Claimant</TableHead>
+                        <TableHead>Contact</TableHead>
+                        <TableHead>Date</TableHead>
+                        <TableHead>Status</TableHead>
+                        <TableHead className="text-right">Action</TableHead>
                       </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
+                    </TableHeader>
+                    <TableBody>
+                      {filteredClaims.map((claim) => (
+                        <TableRow key={claim.id}>
+                          <TableCell className="font-medium">{claim.itemName}</TableCell>
+                          <TableCell>{claim.claimant}</TableCell>
+                          <TableCell>{claim.contact}</TableCell>
+                          <TableCell>{claim.date}</TableCell>
+                          <TableCell>
+                            <Badge
+                              variant={
+                                claim.status === "approved"
+                                  ? "default"
+                                  : claim.status === "rejected"
+                                  ? "destructive"
+                                  : "outline"
+                              }
+                            >
+                              {claim.status === "approved"
+                                ? "Approved"
+                                : claim.status === "rejected"
+                                ? "Rejected"
+                                : "Pending"}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <div className="flex justify-end gap-2">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => viewClaimDetails(claim)}
+                              >
+                                View
+                              </Button>
+                              {claim.status === "pending" && (
+                                <>
+                                  <Button
+                                    variant="default"
+                                    size="sm"
+                                    onClick={() => handleClaimAction(claim, "approve")}
+                                  >
+                                    Approve
+                                  </Button>
+                                  <Button
+                                    variant="destructive"
+                                    size="sm"
+                                    onClick={() => handleClaimAction(claim, "reject")}
+                                  >
+                                    Reject
+                                  </Button>
+                                </>
+                              )}
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </ScrollArea>
               ) : (
                 <div className="text-center py-8">
                   <p className="text-slate-600 dark:text-slate-400">No claims found matching your search.</p>
@@ -733,7 +760,7 @@ export const AdminDashboard = () => {
           </Card>
         </TabsContent>
 
-        {/* Contact Queries Tab */}
+        {/* Contact Queries Tab with ScrollArea */}
         <TabsContent value="queries">
           <Card className="animate-fade-in">
             <CardHeader>
@@ -741,40 +768,42 @@ export const AdminDashboard = () => {
             </CardHeader>
             <CardContent>
               {filteredQueries.length > 0 ? (
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Name</TableHead>
-                      <TableHead>Email</TableHead>
-                      <TableHead>Message Preview</TableHead>
-                      <TableHead>Date</TableHead>
-                      <TableHead className="text-right">Action</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {filteredQueries.map((query) => (
-                      <TableRow key={query.id}>
-                        <TableCell className="font-medium">{query.name}</TableCell>
-                        <TableCell>{query.email}</TableCell>
-                        <TableCell>
-                          {query.message.length > 50 
-                            ? `${query.message.substring(0, 50)}...` 
-                            : query.message}
-                        </TableCell>
-                        <TableCell>{formatDate(query.created_at)}</TableCell>
-                        <TableCell className="text-right">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => viewQueryDetails(query)}
-                          >
-                            View Details
-                          </Button>
-                        </TableCell>
+                <ScrollArea className="h-[600px] w-full">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Name</TableHead>
+                        <TableHead>Email</TableHead>
+                        <TableHead>Message Preview</TableHead>
+                        <TableHead>Date</TableHead>
+                        <TableHead className="text-right">Action</TableHead>
                       </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
+                    </TableHeader>
+                    <TableBody>
+                      {filteredQueries.map((query) => (
+                        <TableRow key={query.id}>
+                          <TableCell className="font-medium">{query.name}</TableCell>
+                          <TableCell>{query.email}</TableCell>
+                          <TableCell>
+                            {query.message.length > 50 
+                              ? `${query.message.substring(0, 50)}...` 
+                              : query.message}
+                          </TableCell>
+                          <TableCell>{formatDate(query.created_at)}</TableCell>
+                          <TableCell className="text-right">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => viewQueryDetails(query)}
+                            >
+                              View Details
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </ScrollArea>
               ) : (
                 <div className="text-center py-8">
                   <p className="text-slate-600 dark:text-slate-400">No contact queries found matching your search.</p>
@@ -785,16 +814,20 @@ export const AdminDashboard = () => {
         </TabsContent>
       </Tabs>
 
-      {/* View/Action Dialog */}
+      {/* Fixed View/Action Dialog with ScrollArea */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-2xl max-h-[80vh]">
           <DialogHeader>
             <DialogTitle>
               {selectedAction && !selectedQuery
                 ? selectedAction === "approve"
                   ? "Approve Item/Claim"
                   : "Reject Item/Claim"
-                : "Details"}
+                : selectedQuery
+                  ? "Contact Query Details"
+                  : selectedClaim
+                    ? "Claim Details"
+                    : "Item Details"}
             </DialogTitle>
             <DialogDescription>
               {selectedAction && !selectedQuery
@@ -805,78 +838,91 @@ export const AdminDashboard = () => {
             </DialogDescription>
           </DialogHeader>
 
-          
-  {/* Scrollable section */}
-  <div className="space-y-4 max-h-[65vh] overflow-y-auto px-1">
-{selectedClaim && (
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold">Item</h4>
-                <p>{selectedClaim.itemName}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold">Claimant</h4>
-                <p>{selectedClaim.claimant}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold">Contact Information</h4>
-                <p>{selectedClaim.contact}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold">Proof/Details</h4>
-                <p>{selectedClaim.proof}</p>
-              </div>
-            </div>
-          )}
-
-          {selectedItem && (
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold">Item</h4>
-                <p>{selectedItem.name}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold">Category</h4>
-                <p>{selectedItem.category}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold">Location</h4>
-                <p>{selectedItem.location}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold">Description</h4>
-                <p>{selectedItem.description}</p>
-              </div>
-              {selectedItem.image && (
+          <ScrollArea className="max-h-[50vh] w-full">
+            {/* Claim Details */}
+            {selectedClaim && (
+              <div className="space-y-4 p-1">
                 <div>
-                  <h4 className="font-semibold">Image</h4>
-                  <img src={selectedItem.image} alt={selectedItem.name} className="max-h-40 rounded-md" />
+                  <h4 className="font-semibold">Item</h4>
+                  <p>{selectedClaim.itemName}</p>
                 </div>
-              )}
-            </div>
-          )}
+                <div>
+                  <h4 className="font-semibold">Claimant</h4>
+                  <p>{selectedClaim.claimant}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Contact Information</h4>
+                  <p>{selectedClaim.contact}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Date</h4>
+                  <p>{selectedClaim.date}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Proof/Details</h4>
+                  <p>{selectedClaim.proof}</p>
+                </div>
+              </div>
+            )}
 
-          {selectedQuery && (
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold">From</h4>
-                <p>{selectedQuery.name} ({selectedQuery.email})</p>
+            {/* Item Details */}
+            {selectedItem && !selectedClaim && (
+              <div className="space-y-4 p-1">
+                <div>
+                  <h4 className="font-semibold">Item</h4>
+                  <p>{selectedItem.name}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Category</h4>
+                  <p>{selectedItem.category}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Type</h4>
+                  <p>{selectedItem.type === "lost" ? "Lost" : "Found"}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Location</h4>
+                  <p>{selectedItem.location}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Date Reported</h4>
+                  <p>{formatDate(selectedItem.reported_at)}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Description</h4>
+                  <p>{selectedItem.description}</p>
+                </div>
+                {selectedItem.image && (
+                  <div>
+                    <h4 className="font-semibold">Image</h4>
+                    <img src={selectedItem.image} alt={selectedItem.name} className="max-h-40 rounded-md" />
+                  </div>
+                )}
               </div>
-              <div>
-                <h4 className="font-semibold">Date</h4>
-                <p>{formatDate(selectedQuery.created_at)}</p>
-              </div>
-              <div>
-                <h4 className="font-semibold">Message</h4>
-                <p className="whitespace-pre-wrap">{selectedQuery.message}</p>
-              </div>
-            </div>
-          )}
+            )}
 
-          </div>
-  <DialogFooter>
+            {/* Query Details */}
+            {selectedQuery && (
+              <div className="space-y-4 p-1">
+                <div>
+                  <h4 className="font-semibold">From</h4>
+                  <p>{selectedQuery.name} ({selectedQuery.email})</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Date</h4>
+                  <p>{formatDate(selectedQuery.created_at)}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Message</h4>
+                  <p className="whitespace-pre-wrap">{selectedQuery.message}</p>
+                </div>
+              </div>
+            )}
+          </ScrollArea>
+
+          <DialogFooter>
             <Button variant="outline" onClick={() => setDialogOpen(false)}>
-              {selectedQuery ? "Close" : "Cancel"}
+              {selectedQuery || (!selectedAction) ? "Close" : "Cancel"}
             </Button>
             {selectedAction && selectedClaim && (
               <Button
