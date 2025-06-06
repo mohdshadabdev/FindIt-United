@@ -17,7 +17,7 @@ const mockItems = [
     category: "Bags & Luggage",
     location: "Library",
     date: new Date(2023, 4, 12),
-    image: "https://placehold.co/600x400/3b82f6/FFFFFF/png?text=Backpack",
+    image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/rucksack/y/z/b/33l-water-resistant-bag-backpack-for-laptop-15-6inch-for-office-original-imag8gs8jhxy3zek.jpeg?q=90&crop=false",
     description: "A blue Jansport backpack with a laptop sleeve inside. Has a small tear on the front pocket.",
     type: "lost"
   },
@@ -27,7 +27,7 @@ const mockItems = [
     category: "Electronics",
     location: "Student Center",
     date: new Date(2023, 4, 15),
-    image: "https://placehold.co/600x400/6366f1/FFFFFF/png?text=MacBook+Pro",
+    image: "https://images.unsplash.com/photo-1580522154071-c6ca47a859ad?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1hY2Jvb2slMjBwcm98ZW58MHx8MHx8fDA%3D",
     description: "13-inch MacBook Pro (2020) with stickers on the cover. Left on a table in the study area.",
     type: "lost"
   },
@@ -37,8 +37,8 @@ const mockItems = [
     category: "ID Cards & Documents",
     location: "Cafeteria",
     date: new Date(2023, 4, 18),
-    image: "https://placehold.co/600x400/8b5cf6/FFFFFF/png?text=ID+Card",
-    description: "Student ID card for Sarah Johnson. Found near the salad bar.",
+    image: "https://images.template.net/21918/Printable-University-ID-Card-Template.jpg",
+    description: "Student ID card for Anita Singh. Found near the salad bar.",
     type: "found"
   },
   {
@@ -47,7 +47,7 @@ const mockItems = [
     category: "Electronics",
     location: "Science Building",
     date: new Date(2024, 4, 20),
-    image: "https://placehold.co/600x400/0ea5e9/FFFFFF/png?text=iPhone+14",
+    image: "https://cdn.zeebiz.com/sites/default/files/2022/09/21/201340-14c.jpg",
     description: "Black iPhone 14 with a transparent case. Found near the lab benches.",
     type: "found"
   },
@@ -67,7 +67,7 @@ const mockItems = [
     category: "Books",
     location: "Main Building",
     date: new Date(2024, 4, 25),
-    image: "https://placehold.co/600x400/14b8a6/FFFFFF/png?text=Engineering+Book",
+    image: "https://www.cl.cam.ac.uk/archive/rja14/Papers/book2coverlarge.jpg",
     description: "Thermodynamics textbook with notes inside. Found in the lecture hall.",
     type: "found"
   },
@@ -77,7 +77,7 @@ const mockItems = [
     category: "Accessories",
     location: "Parking Lot",
     date: new Date(2024, 4, 28),
-    image: "https://placehold.co/600x400/0f172a/FFFFFF/png?text=Black+Wallet",
+    image: "https://teakwoodleathers.com/cdn/shop/products/T_WLT_485_BL_1_1aea31b8-cf7b-4b08-b964-7a9712e8609c.jpg?v=1684316527",
     description: "Black leather wallet containing cash and ID. Found beside a parked bike.",
     type: "found"
   },
@@ -87,7 +87,7 @@ const mockItems = [
     category: "Electronics",
     location: "Dormitory",
     date: new Date(2024, 5, 2),
-    image: "https://placehold.co/600x400/1d4ed8/FFFFFF/png?text=Earbuds",
+    image: "https://i.rtings.com/assets/products/jmVQj3MR/jbl-vibe-100tws-true-wireless/design-medium.jpg?format=auto",
     description: "Black wireless earbuds in a charging case. Last seen near bunk beds.",
     type: "lost"
   }
