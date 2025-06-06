@@ -11,7 +11,7 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { format, parseISO } from "date-fns";
 
-// Use these as fallback if no real items are available
+// sample listings
 const fallbackItems = [
   {
     id: 1,
@@ -59,11 +59,11 @@ const fallbackItems = [
   },
   {
     id: 5,
-    name: "Red Water Bottle",
+    name: "Nike Water Bottle",
     category: "Other",
     location: "Sports Complex",
     date: new Date(2024, 4, 22),
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_3gHhrqdwizXuEXL1NCmts2fTf-kfC0cKfA&s",
+    image: "https://imgs.search.brave.com/MNvAElLrcGq83m71Jt7a0Q7Xc22v79qrb-jxX4fIW54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly94Y2Ru/Lm5leHQuY28udWsv/Q29tbW9uL0l0ZW1z/L0RlZmF1bHQvRGVm/YXVsdC9JdGVtSW1h/Z2VzLzNfNFJhdGlv/L1NlYXJjaC9MZ2Uv/NjA5NTA0LmpwZz9p/bT1SZXNpemUsd2lk/dGg9NDUw",
     type: "lost",
     status: "active",
     reporter: "kavya.reddy@united.edu"
